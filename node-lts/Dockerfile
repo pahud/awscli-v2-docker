@@ -10,3 +10,7 @@ ENV HOME /root
 ENV NVM_DIR "$HOME/.nvm"
 
 RUN source "$NVM_DIR/nvm.sh" && nvm install --lts
+
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
